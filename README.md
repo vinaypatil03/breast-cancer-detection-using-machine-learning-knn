@@ -1,7 +1,7 @@
 # Breast-Cancer-detection-using-Machine-Learning-KNN
 Flask Based Web App to detect Breast Cancer using K-Nearest Neighbors
 
-This application using Python, scikit learn and to predict breaast cancer based upon data inputs.
+This application using Python, scikit learn and to predict breast cancer based upon data inputs.
 
 Make sure you have Python installed atleat 2.7 or higher
 
