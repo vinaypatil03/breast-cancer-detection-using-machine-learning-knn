@@ -1,0 +1,144 @@
+<html>
+<body style="background-color:powderblue ;">
+<p><h1 align = "center">Breast Cancer Detection Tool</h1></p>
+<center>
+<p><h4> Range for below parameters is between 1 to 10 </h4></p>
+</center>
+<form method=post action="" >
+   <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+
+<div class="container">
+    <div class="jumbotron">
+
+<table align="center" class="table table-striped">
+
+  {% for field in form %}
+    <tr>
+    <td>{{ field.label }}</td><td>{{ field }}</td>
+    </tr>
+  {% endfor %}
+</table>
+<p align="center"><input type=submit value=Compute ></form></p>
+<p align="center" > 
+
+
+{% if result != None %}
+Cancer Type:{{result}}
+{% endif %}
+</div>
+</div>
+</p>
+</form>
+
+<center>
+<h3> Algorithm Accuracy = 97.7% &#8776; 98% </h3>
+<!-- jQuery library -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc; 
+}
+
+.panel {
+  padding: 0 18px;
+  display: none;
+  background-color: white;
+  overflow: hidden;
+}
+</style>
+<!-- jQuery library -->
+
+<div class="container">
+    <div class="jumbotron">
+
+<button class="accordion"><center><b>Clump thickness</b></center></button>
+<div class="panel">
+  <p>Benign cells tend to be grouped in monolayers, while cancerous cells are
+often grouped in multilayers.</p>
+</div>
+<button class="accordion"><center><b>Uniformity of cell size/shape</b></center></button>
+<div class="panel">
+  <p>Cancer cells tend to vary in size and shape. That is why these
+parameters are valuable in determining whether the cells are cancerous or not.</p>
+</div>
+<button class="accordion"><center><b>Marginal adhesion</b></center></button>
+<div class="panel">
+  <p>Normal cells tend to stick together. Cancer cells tends to loos this ability.
+So loss of adhesion is a sign of malignancy.</p>
+</div>
+<button class="accordion"><center><b>Single epithelial cell size</b></center> </button>
+<div class="panel">
+  <p>Is related to the uniformity mentioned above. Epithelial cells that
+are significantly enlarged may be a malignant cell.</p>
+</div>
+<button class="accordion"><center><b>Bare nuclei</b></center></button>
+<div class="panel">
+  <p>This is a term used for nuclei that is not surrounded by cytoplasm (the rest of the
+cell). Those are typically seen in benign tumours.</p>
+</div>
+
+<button class="accordion"><center><b>Bland Chromatin</b></center></button>
+<div class="panel">
+  <p>Describes a uniform "texture" of the nucleus seen in benign cells. In cancer
+cells the chromatin tend to be more coarse.</p>
+</div>
+<button class="accordion"><center><b>Normal nucleoli</b></center></button>
+<div class="panel">
+  <p>Nucleoli are small structures seen in the nucleus. In normal cells the
+nucleolus is usually very small if visible at all. In cancer cells the nucleoli become more
+prominent, and sometimes there are more of them.</p>
+</div>
+</div>
+</div>
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+
+
+<p>* This WEB-APP uses a MACHINE LEARNING algorithm to determine whether the Breast Cancer is Benign or Malignant.</p>
+<p>* The dataset is taken from the <a href = "https://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Wisconsin+(Original)">UCI machine learning repository, Wisconsin Breast Cancer Dataset</a></p>
+<p>* The algorithm used in this prediction is K Nearest Neighbors (K-NN) , a classification algorithm.</p>
+<p><h3>MADE BY:</h3>
+1. Vinay Vilas Patil - 18<br>
+2. Arun Vasantlal Jaiswal - 14<br>
+3. Shubham Satish Sakpal - 20<br>
+<h1>BE Computer Department - Bharat College of Engineering</h1>
+<h2>Project Guide - Prof. Vaibhav Badbe</h2>
+<h2>Project Co-Ordinator - Prof. Nilesh Yadav</h2>
+</p>
+</center>
+
+
+
+</body>
+</html>
